@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Работа с REST API</title>
+    <link rel="stylesheet" href="style-page1.css">
+</head>
+
+<body>
+    <div class="container p-4">
+        <div>
+          <a href="index.html"><button class="btn btn-outline-danger">Назад</button></a>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-whatever="@">Добавить Товар</button>
+          <input type="text" id="s_name">
+          <button class="btn btn-outline-success" id="btnSearch">
+              Поиск
+          </button>
+        </div>
+        
+    <div class="mainBlock">
+        
+    </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Название</label>
+                  <input type="text" class="form-control" id="md-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Описание</label>
+                  <input type="text" class="form-control" id="md-someText">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Цена</label>
+                  <input type="email" class="form-control" id="md-price">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Статус</label>
+                    <select name="" id="md-status">
+                        <option value="">Выберите Статус</option>
+                        <option value="Active">В наличии</option>
+                        <option value="Not Active">Не в наличии</option>
+                    </select>
+                </div>
+                <div mb-3>
+                  <label for="photoSelect">Добавить фото</label>
+                  <select name="" id="photoSelect" onchange="showVariants()">
+                    <option value="">Выберите вариант</option>
+                    <option value="0">Через файл</option>
+                    <option value="1">через ссылку</option>
+                  </select>
+                  <input type="file" id="photoFile" class="hide mt-2">
+                  <input type="text" id="photo" placeholder="URL ссылку на картинку" class="hide mt-2">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Товарные группы</label>
+                    <select name="productGroup" id="md-productGroup">
+                        <option value="">Выберите группу</option>
+                        
+                    </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+              <button id="btn" type="button" class="btn btn-primary">Добавить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="modal fade" id="modals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="edit-form">
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Название</label>
+                  <input type="text" class="form-control" name="name" id="edit-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Описание</label>
+                  <input type="text" class="form-control" name="someText" id="edit-someText">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Цена</label>
+                  <input type="email" class="form-control" name="price" id="edit-price">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Статус</label>
+                    <select name="status" id="edit-status">
+                        <option value="">Выберите Статус</option>
+                        <option value="Active">В наличии</option>
+                        <option value="Not active">не в наличии</option>
+                    </select>
+                </div>
+                <div mb-3>
+                  <label for="photoSelect">Добавить фото</label>
+                  <select name="" id="edit-photoSelect" onchange="showVariants()">
+                    <option value="">Выберите вариант</option>
+                    <option value="0">Через файл</option>
+                    <option value="1">через ссылку</option>
+                  </select>
+                  <input type="file" id="photoFile" class="hide mt-2">
+                  <input type="text" id="photo" placeholder="URL ссылку на картинку" class="hide mt-2">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Товарные группы</label>
+                    <select name="productGroup" id="edit-productGroup">
+                        <option value="">Выберите группу</option>
+                    </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="editBtn" class="btn btn-primary">Сhange</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="script-page1.js"></script>
+</body>
+
+</html>

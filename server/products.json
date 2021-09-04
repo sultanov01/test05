@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "name": "Sony",
+      "someText": "madeBook 16",
+      "price": "50000",
+      "status": "",
+      "photoFile": "HuaweiM.jpg",
+      "id": 1,
+      "": "",
+      "productGroup": "Huawei"
+    },
+    {
+      "name": "Iphone SE 2020",
+      "someText": "256Gb Product RED",
+      "price": "40000",
+      "status": "",
+      "photoURL": "https://assets.swappie.com/SwappieiPhoneSE202064Red.jpg",
+      "id": 2,
+      "": "",
+      "productGroup": "Apple"
+    },
+    {
+      "name": "Xiaomi redmi 6",
+      "someText": "3/64 color Black",
+      "price": "8000",
+      "status": "Active",
+      "photoURL": "https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/d/8/d85ae2f0ae5978103a5ef21c90b566981ed1b4ac_15496665432094.jpg",
+      "id": 3
+    },
+    {
+      "name": "Huawei",
+      "someText": "madeBook 16",
+      "price": "50000",
+      "status": "Active",
+      "photoURL": "https://login.kg/image/catalog/new/Notebook/Xiaomi/Mi%20Pro%2015%202020/1.jpg",
+      "id": 4
+    },
+    {
+      "name": "Apple",
+      "someText": "madeBook 16",
+      "price": "1000000",
+      "status": "Active",
+      "photoURL": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1603332211000",
+      "id": 5
+    },
+    {
+      "name": "Iphone SE 2020",
+      "someText": "256Gb PColor Black",
+      "price": "40000",
+      "status": "Active",
+      "photoURL": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-black-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1586574260051",
+      "id": 6
+    },
+    {
+      "name": "Iphone SE 2020",
+      "someText": "256Gb PColor Black",
+      "price": "40000",
+      "status": "Active",
+      "photoFile": "Без названия.jpg",
+      "id": 7
+    }
+  ],
+  "productsGroup": [
+    {
+      "name": "Huawei",
+      "description": "123",
+      "newOption": "Huawei",
+      "id": 1
+    },
+    {
+      "name": "qwe",
+      "description": "",
+      "newOption": "qwe",
+      "id": 2
+    },
+    {
+      "name": "Doni",
+      "description": "",
+      "newOption": "Doni",
+      "id": 3
+    }
+  ],
+  "orders": [
+    {
+      "order": {
+        "1": {
+          "name": "Sony",
+          "price": "50000",
+          "count": 1
+        },
+        "2": {
+          "name": "Iphone SE 2020",
+          "price": "40000",
+          "count": 1
+        },
+        "3": {
+          "name": "Xiaomi redmi 6",
+          "price": "8000",
+          "count": 1
+        }
+      },
+      "date": "2021-06-27T12:17:54.989Z",
+      "status": "",
+      "name": "Daniel",
+      "number": "700916255",
+      "emailUser": "Wall St. 0909",
+      "id": 1
+    },
+    {
+      "order": {
+        "1": {
+          "name": "Sony",
+          "price": "50000",
+          "count": 7
+        },
+        "2": {
+          "name": "Iphone SE 2020",
+          "price": "40000",
+          "count": 5
+        },
+        "3": {
+          "name": "Xiaomi redmi 6",
+          "price": "8000",
+          "count": 6
+        }
+      },
+      "date": "2021-06-27T12:22:08.679Z",
+      "status": "",
+      "name": "Doni",
+      "number": "0706425324",
+      "emailUser": "buiscuit Aveneue",
+      "id": 3
+    }
+  ]
+}
